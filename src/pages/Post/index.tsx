@@ -1,53 +1,83 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Content, Info, PostContainer, PostInfo } from "./styles";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faArrowUpRightFromSquare, faCalendarDay, faChevronLeft, faComment } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowUpRightFromSquare,
+  faCalendarDay,
+  faChevronLeft,
+  faComment,
+} from "@fortawesome/free-solid-svg-icons";
+import { NavLink, useParams } from "react-router-dom";
+import { useContext } from "react";
+import { PostsContext } from "../../contexts/PostsContext";
+import Markdown from "react-markdown";
+import { formatDistanceToNow } from "date-fns";
+import { ptBR } from "date-fns/locale/pt-BR";
 
 export function Post() {
+  const { issueNumber } = useParams();
+  const { issues } = useContext(PostsContext);
+  const issue = issues.find(
+    (issue) => issue.number === parseInt(issueNumber || "", 10)
+  );
+
+  if (!issue) {
+    return <div>Issue não encontrada</div>;
+  }
+
   return (
     <PostContainer>
       <PostInfo>
         <nav>
           <div>
-            <FontAwesomeIcon icon={faChevronLeft}  size="xs" style={{color: "#3294f8",}} />
-            <a href="http://localhost:5173/">voltar</a></div>
+            <FontAwesomeIcon
+              icon={faChevronLeft}
+              size="xs"
+              style={{ color: "#3294f8" }}
+            />
+            <NavLink to="/">
+              <p>voltar</p>
+            </NavLink>
+          </div>
           <div>
-          <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="xs" style={{color: "#3294f8",}} />
-            <a href="">ver no github</a>
-            </div>
-
+            <FontAwesomeIcon
+              icon={faArrowUpRightFromSquare}
+              size="xs"
+              style={{ color: "#3294f8" }}
+            />
+            <a href={issue.html_url} target="_blank">ver no github</a>
+          </div>
         </nav>
-        <h1>JavaScript data types and data structures</h1>
+        <h1>{issue.title}</h1>
         <Info>
           <div>
-          <FontAwesomeIcon icon={faGithub}  style={{color: "#3a536b",}}/>
-            <span><a href="">cameronwll</a></span>
+            <FontAwesomeIcon icon={faGithub} style={{ color: "#3a536b" }} />
+            <span>
+              <a href="">{issue.user.login}</a>
+            </span>
           </div>
           <div>
-          <FontAwesomeIcon icon={faCalendarDay}  style={{color: "#3a536b",}}/>
-            <span>Há 1 dia</span>
+            <FontAwesomeIcon
+              icon={faCalendarDay}
+              style={{ color: "#3a536b" }}
+            />
+            <span>
+              {""}
+              {formatDistanceToNow(new Date(issue.created_at), {
+                addSuffix: true,
+                locale: ptBR,
+              })}
+            </span>
           </div>
           <div>
-          <FontAwesomeIcon icon={faComment} style={{color: "#3a536b",}}/>
-            <span>5 comentários</span>
+            <FontAwesomeIcon icon={faComment} style={{ color: "#3a536b" }} />
+            <span>{issue.comments} comentários</span>
           </div>
         </Info>
       </PostInfo>
       <Content>
         <p>
-          Programming languages all have built-in data structures, but these
-          often differ from one language to another. This article attempts to
-          list the built-in data structures available in JavaScript and what
-          properties they have. These can be used to build other data
-          structures. Wherever possible, comparisons with other languages are
-          drawn. Dynamic typing JavaScript is a loosely typed and dynamic
-          language. Variables in JavaScript are not directly associated with any
-          particular value type, and any variable can be assigned (and
-          re-assigned) values of all types:
-        </p>
-        <p>
-          let foo = 42; // foo is now a number foo = ‘bar’; // foo is now a
-          string foo = true; // foo is now a boolean
+          <Markdown>{issue.body}</Markdown>
         </p>
       </Content>
     </PostContainer>
