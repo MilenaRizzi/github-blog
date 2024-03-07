@@ -11,32 +11,43 @@ export const PostsList = styled.div`
   grid-template-columns: repeat(2, 2fr); /* Duas colunas */
   gap: 32px; /* Espaço entre os itens */
   justify-items: center;
-  padding: 20px 0;
-
+  margin: 48px 0 20px;
 `;
 
 export const PostContent = styled.div`
   width: 416px;
   height: 260px;
   background: ${(props) => props.theme["base-post"]};
-  padding: 32px;
+  padding: 28px;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+  border: 2px solid transparent;
+
+
+    
+    span {
+      font-size: 14px;
+      color: ${(props) => props.theme["base-span"]};
+    }
+  
 
   h1 {
     color: ${(props) => props.theme["base-title"]};
     font-size: 20px;
+    width: 100%vw;
   }
 
   p {
     color: ${(props) => props.theme["base-text"]};
     font-size: 16px;
     line-height: 28px;
+    margin-top: 20px;
+    height: 112px;
     overflow: hidden; 
-   display: -webkit-box;
-    -webkit-line-clamp: 4; // número de linhas que você deseja exibir
-    -webkit-box-orient: vertical;
+     /* display: -webkit-box;
+    -webkit-line-clamp: 3; // número de linhas que você deseja exibir
+    -webkit-box-orient: vertical; */
   }
 
   &:hover{
