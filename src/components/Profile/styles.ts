@@ -14,8 +14,10 @@ export const ProfileContainer = styled.div`
   position: relative;
 
   img {
+    width: 148px;
+    height: 148px;
     border-radius: 8px;
-    padding: 32px 40px;
+    margin: 0 32px 0 40px;
   }
  
 `
@@ -29,6 +31,7 @@ flex-direction: column;
   }
 
   p {
+    width: 612px;
     font-size: 16px;
     color: ${props => props.theme["base-text"]};
   }
