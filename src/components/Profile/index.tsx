@@ -15,6 +15,7 @@ interface ProfileProps {
   company: string
   followers: number
 }
+
 export function Profile() {
 
   const [userData, setUserData] = useState<ProfileProps>();
