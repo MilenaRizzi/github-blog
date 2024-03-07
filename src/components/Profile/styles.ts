@@ -52,12 +52,13 @@ export const Header = styled.div`
      }
   }
 `
-export const Redes = styled.div`
+export const SocialMedia = styled.div`
   display: flex;
   margin-top: 24px;
 
   div {
     display: flex;
+    align-items: center;
     gap: 8px;
     margin-right: 24px;
 

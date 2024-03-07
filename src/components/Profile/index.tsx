@@ -1,8 +1,8 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import {  faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'; // Observe o uso do free-solid-svg-icons
-import { Header, ProfileContainer, ProfileInfos, Redes } from './styles';
+import {  faArrowUpRightFromSquare, faBuilding, faUserGroup } from '@fortawesome/free-solid-svg-icons'; // Observe o uso do free-solid-svg-icons
+import { Header, ProfileContainer, ProfileInfos, SocialMedia } from './styles';
 export function Profile() {
   return (
     <ProfileContainer>
@@ -21,20 +21,20 @@ export function Profile() {
           viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat
           pulvinar vel mass.
         </p>
-        <Redes>
+        <SocialMedia>
           <div>
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon icon={faGithub} style={{color: "#3a536b",}}/>
             <span>cameronsill</span>
           </div>
           <div>
-            <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon icon={faBuilding} style={{color: "#3a536b",}}/>
             <span>Rocketseat</span>
           </div>
           <div>
-            <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon icon={faUserGroup} style={{color: "#3a536b",}}/>
             <span>32 seguidores</span>
           </div>
-        </Redes>
+        </SocialMedia>
       </ProfileInfos>
     </ProfileContainer>
   );
