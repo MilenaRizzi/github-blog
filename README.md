@@ -15,14 +15,13 @@ O projeto consiste em uma aplicação que utilizará da API do Github para busca
 ## Layout web
 
 **Blog**
-![github-blog-img](https://github.com/MilenaRizzi/github-blog/assets/116590085/3aeb9fcc-f0ae-41e9-9371-ab51b2e02109)
+![github-blog-img](https://github.com/MilenaRizzi/github-blog/assets/116590085/0e6d1fa4-bb3c-4208-a71e-19d8738e9679)
 
 **Busca**
-![github-blog-busca](https://github.com/MilenaRizzi/github-blog/assets/116590085/577ea0db-5ab0-41cf-8a98-9547711241fa)
+![github-blog-busca](https://github.com/MilenaRizzi/github-blog/assets/116590085/57787560-fa1f-4671-82da-79e9a68fc87a)
 
 **Post**
-![github-blog-post](https://github.com/MilenaRizzi/github-blog/assets/116590085/9b0cf1e1-d006-4f80-a9dd-c2e293798793)
-
+![github-blog-post](https://github.com/MilenaRizzi/github-blog/assets/116590085/c5948eba-149b-4e02-bec2-4ca72090f949)
 
 # Tecnologias Utilizadas
 ## Front end
