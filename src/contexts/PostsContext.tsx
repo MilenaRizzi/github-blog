@@ -31,12 +31,13 @@ export function PostsProvider({ children }: PostsProviderProps) {
     let url = "repos/MilenaRizzi/github-blog/issues";
     console.log(searchQuery);
     if (searchQuery) {
-      
-      url = `search/issues?q=${encodeURIComponent(searchQuery)}+repo:MilenaRizzi/github-blog`;
+      url = `search/issues?q=${encodeURIComponent(
+        searchQuery
+      )}+repo:MilenaRizzi/github-blog`;
     }
 
     const response = await api.get(url);
-    const data = searchQuery ? response.data.items : response.data; 
+    const data = searchQuery ? response.data.items : response.data;
     setIssues(data);
   }
 
@@ -45,6 +46,8 @@ export function PostsProvider({ children }: PostsProviderProps) {
   }, []);
 
   return (
-    <PostsContext.Provider value={{ issues, fetchIssue }}>{children}</PostsContext.Provider>
+    <PostsContext.Provider value={{ issues, fetchIssue }}>
+      {children}
+    </PostsContext.Provider>
   );
 }

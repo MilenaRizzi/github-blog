@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const SearchFormContainer = styled.div`
   width: 100%;
   max-width: 54rem;
-  margin: 0 auto;   
-`
+  margin: 0 auto;
+`;
 
 export const SearchFormContent = styled.form`
   margin-top: 72px;
@@ -34,16 +34,13 @@ export const SearchFormContent = styled.form`
     color: ${(props) => props.theme["base-text"]};
     border-radius: 6px;
 
-
     &::placeholder {
       font-size: 16px;
       color: ${(props) => props.theme["base-label"]};
     }
 
-    &:focus{
-    border: 1px solid ${(props) => props.theme["blue"]};
-
+    &:focus {
+      border: 1px solid ${(props) => props.theme["blue"]};
     }
-
   }
 `;

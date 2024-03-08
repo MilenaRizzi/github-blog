@@ -45,7 +45,9 @@ export function Post() {
               size="xs"
               style={{ color: "#3294f8" }}
             />
-            <a href={issue.html_url} target="_blank">ver no github</a>
+            <a href={issue.html_url} target="_blank">
+              ver no github
+            </a>
           </div>
         </nav>
         <h1>{issue.title}</h1>

@@ -4,8 +4,8 @@ import { Cover } from "../components/Cover";
 export function DefaultLayout() {
   return (
     <div>
-      <Cover/>
-      <Outlet/>
+      <Cover />
+      <Outlet />
     </div>
-  )
+  );
 }

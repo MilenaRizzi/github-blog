@@ -30,7 +30,11 @@ export function SearchForm() {
           <h1>Publicações</h1>
           <span>{issues.length} publicações</span>
         </div>
-        <input type="text" placeholder="Buscar Conteúdo" {...register("query")} />
+        <input
+          type="text"
+          placeholder="Buscar Conteúdo"
+          {...register("query")}
+        />
       </SearchFormContent>
     </SearchFormContainer>
   );

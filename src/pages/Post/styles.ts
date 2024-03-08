@@ -22,18 +22,18 @@ export const PostInfo = styled.div`
       display: flex;
       align-items: center;
       gap: 8px;
-      
-    a {
-      color: ${(props) => props.theme["blue"]};
-      font-size: 12px;
-      text-decoration: none;
-      text-transform: uppercase;
 
-      &:hover {
-        text-decoration: underline;
+      a {
+        color: ${(props) => props.theme["blue"]};
+        font-size: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
-  }
   }
 
   h1 {

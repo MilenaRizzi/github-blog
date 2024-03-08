@@ -18,7 +18,10 @@ export function Blog() {
       <PostsList>
         {issues.map((issue) => {
           return (
-            <NavLink to={`/post/${issue.number}`} style={{ textDecoration: 'none' }}>
+            <NavLink
+              to={`/post/${issue.number}`}
+              style={{ textDecoration: "none" }}
+            >
               <PostContent key={issue.number}>
                 <h1>{issue.title}</h1>
                 <span>
