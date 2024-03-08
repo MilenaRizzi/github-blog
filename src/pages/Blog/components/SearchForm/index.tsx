@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { SearchFormContainer } from "./styles";
+import { SearchFormContainer, SearchFormContent } from "./styles";
 import { PostsContext } from "../../../../contexts/PostsContext";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -24,12 +24,14 @@ export function SearchForm() {
   }
 
   return (
-    <SearchFormContainer onSubmit={handleSubmit(handleSearchPost)}>
-      <div>
-        <h1>Publicações</h1>
-        <span>{issues.length} publicações</span>
-      </div>
-      <input type="text" placeholder="Buscar Conteúdo" {...register("query")} />
+    <SearchFormContainer>
+      <SearchFormContent onSubmit={handleSubmit(handleSearchPost)}>
+        <div>
+          <h1>Publicações</h1>
+          <span>{issues.length} publicações</span>
+        </div>
+        <input type="text" placeholder="Buscar Conteúdo" {...register("query")} />
+      </SearchFormContent>
     </SearchFormContainer>
   );
 }
