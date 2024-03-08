@@ -4,6 +4,8 @@ export const PostsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
+
 `;
 
 export const PostsList = styled.div`
@@ -12,7 +14,7 @@ export const PostsList = styled.div`
   gap: 32px; /* Espaço entre os itens */
   justify-items: center;
   margin: 48px 0 20px;
-
+  
 `;
 
 export const PostContent = styled.div`
@@ -25,8 +27,6 @@ export const PostContent = styled.div`
   border-radius: 10px;
   border: 2px solid transparent;
   overflow: hidden;
-
-
     
     span {
       font-size: 14px;
@@ -38,18 +38,16 @@ export const PostContent = styled.div`
     color: ${(props) => props.theme["base-title"]};
     font-size: 20px;
     width: 100%vw;
+    margin-bottom: 10px;
   }
 
   p {
     color: ${(props) => props.theme["base-text"]};
     font-size: 16px;
-    line-height: 28px;
-    margin-top: 20px;
+    line-height: 22px;
+    margin-top: 13px;
     height: 112px;
     overflow: hidden; 
-     /* display: -webkit-box;
-    -webkit-line-clamp: 3; // número de linhas que você deseja exibir
-    -webkit-box-orient: vertical; */
   }
 
   &:hover{

@@ -20,6 +20,5 @@ export const CoverContainer = styled.div`
     max-height: 544px;
     object-fit: cover;
     width: 130%;
-    max-width: 100rem;
   }
 `;

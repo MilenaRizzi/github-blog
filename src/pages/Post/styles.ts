@@ -6,11 +6,12 @@ export const PostContainer = styled.div`
 `;
 
 export const PostInfo = styled.div`
-  height: 168px;
+  height: 180px;
   background: ${(props) => props.theme["base-profile"]};
-  padding: 32px;
+  padding: 30px;
   margin-top: -90px;
   position: relative;
+  border-radius: 10px;
 
   nav {
     display: flex;
@@ -45,7 +46,7 @@ export const Info = styled.div`
   display: flex;
   gap: 32px;
   color: ${(props) => props.theme["base-span"]};
-  margin-top: 8px;
+  margin-top: 12px;
 
   div {
     display: flex;
