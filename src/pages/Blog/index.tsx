@@ -14,22 +14,20 @@ export function Blog() {
   return (
     <PostsContainer>
       <Profile />
-      <div>
-        <SearchForm />
-      </div>
+      <SearchForm />
       <PostsList>
         {issues.map((issue) => {
           return (
             <NavLink to={`/post/${issue.number}`}>
               <PostContent key={issue.number}>
-                  <h1>{issue.title}</h1>
-                  <span>
-                    {" "}
-                    {formatDistanceToNow(new Date(issue.created_at), {
-                      addSuffix: true,
-                      locale: ptBR,
-                    })}
-                  </span>
+                <h1>{issue.title}</h1>
+                <span>
+                  {" "}
+                  {formatDistanceToNow(new Date(issue.created_at), {
+                    addSuffix: true,
+                    locale: ptBR,
+                  })}
+                </span>
                 <p>
                   <Markdown>{issue.body}</Markdown>
                 </p>
