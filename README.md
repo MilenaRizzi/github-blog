@@ -21,7 +21,8 @@ O projeto consiste em uma aplicação que utilizará da API do Github para busca
 ![image](https://github.com/MilenaRizzi/github-blog/assets/116590085/69ad8002-2238-4759-b290-98a7b57a13f3)
 
 **Post**
-![image](https://github.com/MilenaRizzi/github-blog/assets/116590085/92a63fdd-cfd3-43ee-9a0f-c6199f7ea41d)
+![image](https://github.com/MilenaRizzi/github-blog/assets/116590085/26a396c3-7f7f-42ea-a2f7-b51f61b4bee7)
+
 
 # Tecnologias Utilizadas
 ## Front end
