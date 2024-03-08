@@ -15,7 +15,8 @@ O projeto consiste em uma aplicação que utilizará da API do Github para busca
 ## Layout web
 
 **Blog**
-![image](https://github.com/MilenaRizzi/github-blog/assets/116590085/3f7ba1b4-bbc9-46b0-a321-27e26b50527b)
+![github-blog-img](https://github.com/MilenaRizzi/github-blog/assets/116590085/3aeb9fcc-f0ae-41e9-9371-ab51b2e02109)
+
 
 
 **Busca**
