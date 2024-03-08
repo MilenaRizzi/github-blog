@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-export const SearchFormContainer = styled.form`
-  width: 864px;
-  margin: auto;
+export const SearchFormContainer = styled.div`
+  width: 100%;
+  max-width: 54rem;
+  margin: 0 auto;   
+`
+
+export const SearchFormContent = styled.form`
   margin-top: 72px;
 
   div {
@@ -21,7 +25,7 @@ export const SearchFormContainer = styled.form`
   }
 
   input {
-    width: 864px;
+    width: 100%;
     height: 50px;
     margin-top: 12px;
     background: ${(props) => props.theme["base-input"]};

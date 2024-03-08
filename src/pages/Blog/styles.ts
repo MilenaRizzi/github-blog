@@ -12,10 +12,11 @@ export const PostsList = styled.div`
   gap: 32px; /* Espaço entre os itens */
   justify-items: center;
   margin: 48px 0 20px;
+
 `;
 
 export const PostContent = styled.div`
-  width: 416px;
+  max-width: 416px;
   height: 260px;
   background: ${(props) => props.theme["base-post"]};
   padding: 28px;
@@ -23,6 +24,7 @@ export const PostContent = styled.div`
   flex-direction: column;
   border-radius: 10px;
   border: 2px solid transparent;
+  overflow: hidden;
 
 
     

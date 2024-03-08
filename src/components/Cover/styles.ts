@@ -6,7 +6,6 @@ export const CoverContainer = styled.div`
   justify-content: center;
   position: relative;
   background-size: cover;
-  width: 100%vw;
 
   img:nth-child(1) {
     width: 148px;
@@ -20,5 +19,7 @@ export const CoverContainer = styled.div`
     left: 0;
     max-height: 544px;
     object-fit: cover;
+    width: 130%;
+    max-width: 100rem;
   }
 `;
