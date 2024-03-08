@@ -17,13 +17,11 @@ O projeto consiste em uma aplicação que utilizará da API do Github para busca
 **Blog**
 ![github-blog-img](https://github.com/MilenaRizzi/github-blog/assets/116590085/3aeb9fcc-f0ae-41e9-9371-ab51b2e02109)
 
-
-
 **Busca**
-
+![github-blog-busca](https://github.com/MilenaRizzi/github-blog/assets/116590085/577ea0db-5ab0-41cf-8a98-9547711241fa)
 
 **Post**
-
+![github-blog-post](https://github.com/MilenaRizzi/github-blog/assets/116590085/9b0cf1e1-d006-4f80-a9dd-c2e293798793)
 
 
 # Tecnologias Utilizadas
